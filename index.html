@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="images/airfly.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+	<script defer src="js/bootstrap.bundle.min.js"></script>
+  
+  <title>일본 관광 정보</title>
+  <style>
+      .c-item {
+				height: 550px;
+			}
+      .c-img {
+				height: 100%;
+				object-fit: cover;
+				filter: hue-rotate(0.6);
+			}
+			.overview {
+				height: 180px;
+				background-color: #d3dae1;
+			}
+			.overview i {
+				font-size: 1.2em;
+				color: crimson;
+			}
+			#package img {
+				height: 250px;
+				object-fit: cover;
+			}
+      .package1 {
+        font-size: 50px;
+      }
+      /* 플로팅 배너 시작 */
+      * {margin: 0; padding: 0;}
+      a {text-decoration: none;}
+      li {list-style: none;}
+      .header {background: #000; height: auto;}
+      .content .box {width: fit-content; margin: 0 auto; height: auto; display: flex;}
+      .content .box div {border: 1px;}
+      .content .box .article {width: auto;}
+      .content .box .side {position: fixed; top: 100px; width: 10px; height: 10px; left: 10px;}
+      .footer {background: #000; height: 150px;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<!-- 내비게이션 바 시작 -->
+      <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">💮일본 관광 정보</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">목적</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  🏯일본도시
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">도쿄</a></li>
+                  <li><a class="dropdown-item" href="#">오사카</a></li>
+                  <li><a class="dropdown-item" href="#">훗카이도</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">추천하는 관광 명소 커뮤니티</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">상담할게 있다면 맨 아래 하단 연락처로 연락 부탁드립니다.</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="관광 원하시는 도시 이름 적어주세요." aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">검색</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+<!-- 내비게이션 바 끝 --> 
+      <div class="content">
+        <div class="box">
+          <hr class="article">
+<!-- 캐로셀 섹션 시작 -->
+          <section id="hero-carousel" class="carousel slide mt-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active c-item">
+                <img src="images/japan1.jpg" class="d-block w-100 c-img" alt="Slide 1" />
+                <div class="carousel-caption top-0 mt-5">
+                  <p class="mt-5 fs-3 text-uppercase">돈 아깝지 않는 관광</p>
+                  <h1 class="display-1 fw-bolder text-capitalize">도쿄 명소 정보</h1>
+                  <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">
+                    정보 보기
+                  </button>
+                </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img src="images/japan2.jpg" class="d-block w-100 c-img" alt="Slide 2" />
+                <div class="carousel-caption top-0 mt-5">
+                  <p class="text-uppercase fs-3 mt-5">돈 아깝지 않는 관광</p>
+                  <p class="display-1 fw-bolder text-capitalize">오사카 명소 정보</p>
+                  <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">
+                    정보 보기
+                  </button>
+                </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img src="images/japan3.jpg" class="d-block w-100 c-img" alt="Slide 3" />
+                <div class="carousel-caption top-0 mt-5">
+                  <p class="text-uppercase fs-3 mt-5">돈 아깝지 않는 관광</p>
+                  <p class="display-1 fw-bolder text-capitalize">훗카이도 명소 정보</p>
+                  <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">
+                    정보 보기
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">이전</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">다음</span>
+            </button>
+          </section>
+<!-- 캐로셀 섹션 끝 -->
+<!-- 모달섹션 시작 -->
+          <section class="modal fade" tabindex="-1" id="booking-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">관광 정보</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="#">
+                    <div class="form-floating mb-3">
+                      <select id="select1" class="form-select">
+                        <option value="1">도쿄</option>
+                        <option value="2">오사카</option>
+                        <option value="3">훗카이도</option>
+                      </select>
+                      <label for="select1">원하시는 관광 장소 선택하세요!</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                  <button type="button" class="btn btn-primary">정보 보기</button>
+                </div>
+              </div>
+            </div>
+          </section>
+<!-- 모달섹션 끝 -->
+<!-- 목록 그룹 시작 -->
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  도쿄
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  오사카
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  훗카이도
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+          </div>
+<!-- 목록 그룹 끝 -->
+<!-- 오버뷰섹션 시작 -->
+          <section class="overview">
+            <div class="container-fluid d-flex h-100 align-items-center text-center">
+              <div class="row fs-4 w-100 mx-atuo">
+                <div class="col-lg-4">
+                  <i class="bi bi-airplane-fill me-2"></i>
+                  어메이징한 투어
+                </div>
+                <div class="col-lg-4">
+                  <i class="bi bi-wallet-fill me-2"></i>
+                  지금 아고다로 예약시 10% 할인 
+                </div>
+                <div class="col-lg-4">
+                  <i class="bi bi-patch-check-fill me-2"></i>
+                  모두가 만족하는 관광 투어
+                </div>
+              </div>
+            </div>
+          </section>
+<!-- 오버뷰섹션 끝 -->
+<!-- 패키지섹션 시작 (패키지 안에 동영상 자동재생 설정해서 넣기) -->
+          <section id="package" class="container pt-5">
+            <div class="text-center py-5">
+              <h2 class="fw-bolder text-uppercase">package</h2>
+              <p class="package1">재미있는 일본 관광 명소</p>
+              <!-- 동영상 유튜브 링크 시작 -->
+              <iframe width="700" height="450" src="https://www.youtube.com/embed/nm5ilcftw8E" title="【도쿄】여행 - 도쿄의 인기 관광 스팟 특집 | 일본 여행 | 아시아 여행 | Tokyo Travel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <!-- 동영상 유튜브 링크 끝 -->
+            </div>
+            <div class="row pb-5">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/japan1.jpg"" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 class="card-title text-center py-2">도쿄</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis at illum natus sequi explicabo,
+                      adipisci saepe et. Vero, labore enim.
+                    </p>
+                    <a href="#" class="btn btn-outline-success">더 알아보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/japan2.jpg" alt="" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 class="card-title text-center py-2">오사카</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis at illum natus sequi explicabo,
+                      adipisci saepe et. Vero, labore enim.
+                    </p>
+                    <a href="#" class="btn btn-outline-success">더 알아보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img src="images/japan3.jpg" alt="" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 class="card-title text-center py-2">훗카이도</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis at illum natus sequi explicabo,
+                      adipisci saepe et. Vero, labore enim.
+                    </p>
+                    <a href="#" class="btn btn-outline-success">더 알아보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+<!-- 패키지섹션 끝 -->
+<!-- 자주묻는질문섹션 시작 -->
+          <section id="faq" class="container py-md-5">
+            <div class="text-center py-5">
+              <h2 class="fw-bolder text-uppercase">faq</h2>
+              <p>무엇이든 물어보세요!</p>
+            </div>
+            <div class="container">
+              <div class="accordion w-lg-75 mx-auto" id="accordionParent">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#collapseOne" data-bs-toggle="collapse">
+                      투어는 얼마나 걸리나요?
+                    </button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#accordionParent">
+                    <div class="accordion-body">
+                      <p>네 비행기포함 일주일에서 10일 걸립니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-target="#collapseTwo" data-bs-toggle="collapse">
+                      비행기 티켓은 포함되어 있나요?
+                    </button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#accordionParent">
+                    <div class="accordion-body">
+                      <p>네 비행기표 포함된 투어 패키지 입니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-target="#collapseThree" data-bs-toggle="collapse">
+                      취소는 언제까지 가능한가요?
+                    </button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordionParent">
+                    <div class="accordion-body">
+                      <p>패키지 예약후 출발 2주전 까지는 무료취소 가능합니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="side"><a href="https://www.agoda.com/?cid=1719676"><img src="images/agoda.jpg"></a></div>
+<!-- 플로팅 배너 끝 -->
+        </div>
+          </section>
+<!-- 자주묻는질문섹션 끝 -->
+        </div>
+      </div>
+  <!-- 푸터섹션 시작 -->
+  <div class="footer">
+    <div class="container text-light text-center">
+      <p class="display-5 mb-3">🗾 일본 관광 정보</p>
+      <p class="display-13 mb-3">연락처 : 0000 - 0000</p>
+      <small>&copy; Copyright by me. All rights reserved.</small>
+    </div>
+  </div>
+  <!-- 푸터섹션 끝 -->
+</div>
+</body>
+</html>
